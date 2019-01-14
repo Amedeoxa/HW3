@@ -13,7 +13,7 @@ I've created a class for each approach with the following methods:
 
 For the benchmark I've tested the four classes using lists of numbers generated with `random.randint()` of increasing size, from 100 elements to 10000 elements with increments of 100. The performance was measured with `time.time()` for each method of each class 20 times for precision.
 
-In the file [data](https://github.com/Amedeoxa/HW3/tree/master/data) and [datawithBQ](https://github.com/Amedeoxa/HW3/tree/master/datawithBQ)\\\\ you can find more graphs and the [csv](https://github.com/Amedeoxa/HW3/blob/master/data/data_table.csv) containing the table with the benchmark numbers. And [here](https://github.com/Amedeoxa/HW3/blob/master/hw3.py) you can find the actual Python code used.
+In the file [data](https://github.com/Amedeoxa/HW3/tree/master/data) and [datawithBQ](https://github.com/Amedeoxa/HW3/tree/master/datawithBQ) you can find more graphs and the [csv](https://github.com/Amedeoxa/HW3/blob/master/data/data_table.csv) containing the table with the benchmark numbers. And [here](https://github.com/Amedeoxa/HW3/blob/master/hw3.py) you can find the actual Python code used.
 
 Here is a table of the times(in μs) of the first 10 runs:
 
@@ -30,7 +30,7 @@ Here is a table of the times(in μs) of the first 10 runs:
 
 As we can see the `BubbleSort` algorithm quickly becomes unmanageable, taking ~5000x longer than `BinarySearchTree` to ad a new element as the lists reached length 1400. Infact `BubbleSort` has an average time complexity of **O(n^2)**. Likewise `QuickSort` hase an average time commplexity of O(nlog(n)), and slows much faster then `BinarySearchTree` and `Heap`.
 
-![image addAll](https://github.com/Amedeoxa/HW3/blob/master/datawithBQ/allAdd.png)\\\\\\
+![image addAll](https://github.com/Amedeoxa/HW3/blob/master/datawithBQ/allAdd.png)
 
 Therefore, we continued **without** `BubbleSort` of `Quicksort` for lists > 1000.
 
@@ -59,7 +59,7 @@ Therefore, we continued **without** `BubbleSort` of `Quicksort` for lists > 1000
 ![Alllog](https://github.com/Amedeoxa/HW3/blob/master/data/Alllog.png)
 
 
-#### `get_min` and `get_max`
+#### Performance `get_min` and `get_max`
 As we can see from the graph below, getting the min and max from `QuickSort` (and `BubbleSort` for that matter) and `Heap`
 immediate. This is because the all we are doing is accessing the first or last element of a list.
 `BinarySearchTree` instead takes a bit more time since we must traverse all the tree's leftmost or rightmost branches.
@@ -69,7 +69,7 @@ immediate. This is because the all we are doing is accessing the first or last e
 
 
 
-#### `add`
+#### Performance `add`
 As we can see from the graph below, adding a random value to our `Heap` is the quickest since we add it to the first free branch, only checking if it is smaller or larger than our root. Worst case time complexity is O(log(n)), but on average it is closer to O(1) 
 
 `BinarySearchTree`is the second fastest of the four with a time complexity averaging O(log(n)). 
