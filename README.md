@@ -19,13 +19,13 @@ Here is a table of the times(in μs) of the first 10 runs:
 
 |             |             |            |         |          |             |             |              |              |               |               |                |                | 
 |-------------|-------------|------------|---------|----------|-------------|-------------|--------------|--------------|---------------|---------------|----------------|----------------| 
-| List length | Bubble add  | Quick add  | BST add | Heap add | BST get_min | BST get_max | Heap get_min | Heap get_max | Quick get_min | Quick get_max | Bubble get_min | Bubble get_max | 
+| List length | **Bubble add**  | **Quick add**  | **BST add** | **Heap add** | BST get_min | BST get_max | Heap get_min | Heap get_max | Quick get_min | Quick get_max | Bubble get_min | Bubble get_max | 
 | 100         | 36.2082     | 12.64749   | 0.74391 | 0.19832  | 0.09928     | 0           | 0            | 0            | 0.09918       | 0.09959       | 0.04959        | 0.09923        | 
 | 200         | 274.88289   | 52.22116   | 1.09141 | 0.04954  | 0.29745     | 0.34711     | 0.09918      | 0.04959      | 0.14875       | 0.05312       | 0.04961        | 0.04959        | 
 | …           | …           | …          | …       | …        | …           | …           | …            | …            | …             | …             | …              | …              | 
 | 800         | 17549.44811 | 939.973    | 5.60141 | 0.843    | 1.58699     | 0.9922      | 0.54569      | 0.44663      | 0.74468       | 0.39711       | 1.08507        | 0.55211        | 
 | 900         | 24851.5837  | 1250.17579 | 6.34975 | 0.74441  | 1.49138     | 1.98169     | 0.5425       | 0.74358      | 1.04506       | 0.44901       | 1.38571        | 0.83988        | 
-| 1000        | ***34680.15754*** | **1492.45019** | 6.74284 | 0.79341  | 1.44022     | 2.28565     | 0.4962       | 0.49605      | 1.23847       | 0.8461        | 2.38478        | 0.69716        | 
+| 1000        | ***34680.15754*** | **1492.45019** | **6.74284** | **0.79341**  | 1.44022     | 2.28565     | 0.4962       | 0.49605      | 1.23847       | 0.8461        | 2.38478        | 0.69716        | 
 
 
 As we can see the `BubbleSort` algorithm quickly becomes unmanageable, taking ~5000x longer than `BinarySearchTree` to ad a new element as the lists reached length 1400. Infact `BubbleSort` has an average time complexity of **O(n^2)**. Likewise `QuickSort` hase an average time commplexity of O(nlog(n)), and slows much faster then `BinarySearchTree` and `Heap`.
